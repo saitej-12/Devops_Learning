@@ -23,6 +23,14 @@ Staring the application
 
 Baseling/Configuring server is nothing but making it ready to host the application
 
+[ root@ip-172-31-27-184 /home/ec2-user ]# git clone https://github.com/daws-86s                                               
+[ root@ip-172-31-27-184 /home/ec2-user/shell-roboshop ]# scp mongo.repo mongodb      
+[ root@ip-172-31-27-184 /home/ec2-user/shell-roboshop ]# ssh ec2-user@13.221.12                                               4.22 'cd /tmp && sudo sh mongodb.sh'
+
+[ root@ip-172-31-27-184 /home/ec2-user/shell-roboshop ]# ansible all -i <ip-addresss> , -e ansible_user=ec2-user -e ansible_password=DevOps321 -m ping 
+[ root@ip-172-31-27-184 /home/ec2-user/shell-roboshop ]# ansible all -i <ip-addresss_of _ Node> , -e ansible_user=ec2-user -e ansible_password=DevOps321 -b -m dnf -a "name=nginx state=installed"
+[ root@ip-172-31-27-184 /home/ec2-user/shell-roboshop ]# ansible all -i 13.221.124.22, -e ansible_user=ec2-user -e ansible_password=DevOps321 -b -m service -a "name=nginx state=started"
+
 Deployment -> Downtime
 ===========
 1. Stop the application
